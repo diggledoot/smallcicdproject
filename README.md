@@ -1,4 +1,4 @@
-# small-cicd-project
+# smallcicdproject
 
 A minimal CI/CD playground for testing and experimentation.
 
