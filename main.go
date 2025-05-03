@@ -7,7 +7,6 @@ import (
 )
 
 func main() {
-	fmt.Println("Hello 🌎")
 	say, err := cowsay.Say(
 		"Howdy 🤠",
 		cowsay.Type("default"),
