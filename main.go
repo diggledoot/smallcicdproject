@@ -1,20 +1,29 @@
 package main
 
 import (
-	"fmt"
+	"net/http"
 
 	cowsay "github.com/Code-Hex/Neo-cowsay/v2"
+	"github.com/gin-gonic/gin"
 )
 
-func main() {
-	fmt.Println("Hello 🌎")
+func say(input string) string {
 	say, err := cowsay.Say(
-		"Howdy 🤠",
+		input,
 		cowsay.Type("default"),
 		cowsay.BallonWidth(40),
 	)
 	if err != nil {
 		panic(err)
 	}
-	fmt.Println(say)
+	return say
+}
+func main() {
+	router := gin.Default()
+	router.GET("/cowsay", func(c *gin.Context) {
+		c.JSON(http.StatusOK, gin.H{
+			"cowsay": say("Howdy 🤠"),
+		})
+	})
+	router.Run()
 }
