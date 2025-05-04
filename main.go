@@ -28,6 +28,7 @@ func callCowsay() {
 		slog.Error("Error!", "error", err)
 		return
 	}
+	slog.Info("This is a cron ⏰")
 	defer resp.Body.Close()
 }
 
