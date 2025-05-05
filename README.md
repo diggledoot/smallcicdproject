@@ -1,6 +1,6 @@
 # smallcicdproject
 
-A minimal CI/CD playground for testing and experimentation.
+A minimal CI/CD playground for testing and experimentation. This is a trigger by PR. Update the PR.
 
 Checklist
 - [x] initialize go project
