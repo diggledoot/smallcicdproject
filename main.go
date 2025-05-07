@@ -48,7 +48,5 @@ func main() {
 		slog.Error("Failed to add cron function", "error", err)
 	}
 	cowsayCron.Start()
-	if err := router.Run(); err != nil {
-		slog.Error("Failed to start server", "error", err)
-	}
+	router.Run()
 }
