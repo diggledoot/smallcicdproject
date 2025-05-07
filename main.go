@@ -29,7 +29,11 @@ func callCowsay() {
 		return
 	}
 	slog.Info("This is a cron ⏰")
-	defer resp.Body.Close()
+	defer func() {
+		if err := resp.Body.Close(); err != nil {
+			slog.Error("Failed to close response body", "error", err)
+		}
+	}()
 }
 
 func main() {
@@ -39,10 +43,12 @@ func main() {
 			"cowsay": say("Howdy 🤠"),
 		})
 	})
-
 	cowsayCron := cron.New()
-	cowsayCron.AddFunc("@every 3s", callCowsay)
+	if err := cowsayCron.AddFunc("@every 3s", callCowsay); err != nil {
+		slog.Error("Failed to add cron function", "error", err)
+	}
 	cowsayCron.Start()
-
-	router.Run()
+	if err := router.Run(); err != nil {
+		slog.Error("Failed to start server", "error", err)
+	}
 }
