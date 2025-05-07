@@ -7,4 +7,4 @@ Checklist
 - [x] add cowsay dependency
 - [x] add endpoint to get a cowsay
 - [x] add process that to emit logs with cowsay + call the cowsay endpoint
-- [ ] add golang linter
+- [x] add golang linter
