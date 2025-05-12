@@ -9,6 +9,7 @@ Checklist
 - [x] add process that to emit logs with cowsay + call the cowsay endpoint
 - [x] add golang linter
 - [x] dockerize
+- [x] added secret for docker registry
 - [ ] add release functionality
 - [ ] write automation to dockerize and tag with release tag
 - [ ] tbc...
