@@ -28,7 +28,7 @@ func callCowsay() {
 		slog.Error("Error!", "error", err)
 		return
 	}
-	slog.Info("This is a cron ⏰ and you're on release 1.0.2!")
+	slog.Info("This is a cron ⏰ and you're on release 1.0.3!")
 	defer func() {
 		if err := resp.Body.Close(); err != nil {
 			slog.Error("Failed to close response body", "error", err)
