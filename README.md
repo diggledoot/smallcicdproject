@@ -13,3 +13,4 @@ Checklist
 - [x] add release functionality
 - [x] write automation to dockerize and tag with release tag
 - [ ] deploy app to k8s
+- [ ] this should ignore the gha
