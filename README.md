@@ -10,6 +10,6 @@ Checklist
 - [x] add golang linter
 - [x] dockerize
 - [x] added secret for docker registry
-- [ ] add release functionality
-- [ ] write automation to dockerize and tag with release tag
-- [ ] tbc...
+- [x] add release functionality
+- [x] write automation to dockerize and tag with release tag
+- [ ] deploy app to k8s
